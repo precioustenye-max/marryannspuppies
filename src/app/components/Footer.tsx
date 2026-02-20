@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a 
-                href="mailto:info@marryannpuppies.com"
+                href="mailto:marryanns226@gmail.com"
                 className="w-10 h-10 bg-orange-800 hover:bg-orange-700 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Email"
               >
@@ -79,8 +79,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@marryannpuppies.com" className="text-orange-200 hover:text-white transition-colors text-sm">
-                  info@marryannpuppies.com
+                <a href="mailto:marryanns226@gmail.com" className="text-orange-200 hover:text-white transition-colors text-sm">
+                  marryanns226@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
