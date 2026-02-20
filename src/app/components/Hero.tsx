@@ -57,7 +57,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[90vh] flex items-center  overflow-hidden">
       {/* Background Image with Overlay */}
       <motion.div 
         initial={{ scale: 1.1 }}

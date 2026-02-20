@@ -9,10 +9,10 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen  bg-white">
       <Header />
-      <main>
         <Hero />
+      <main className='max-w-6xl mx-auto'>
         <About />
         <AvailablePuppies />
         <AdoptionProcess />
