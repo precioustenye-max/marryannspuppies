@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, MapPin, Clock, Send } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -9,7 +9,6 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     message: ''
   });
 
@@ -20,7 +19,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n\n` +
+      `\n` +
       `Message:\n${formData.message}`
     );
     
@@ -90,20 +89,6 @@ export default function Contact() {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="(555) 123-4567"
-                      className="border-orange-200 focus:border-orange-500"
-                    />
-                  </div>
-                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Your Message *
                     </label>
@@ -142,16 +127,6 @@ export default function Contact() {
                       <p className="text-sm">marryanns226@gmail.com</p>
                     </div>
                   </a>
-                  <a 
-                    href="tel:+15551234567"
-                    className="flex items-start gap-3 text-gray-700 hover:text-orange-600 transition-colors"
-                  >
-                    <Phone className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium">Phone</p>
-                      <p className="text-sm">(555) 123-4567</p>
-                    </div>
-                  </a>
                   <div className="flex items-start gap-3 text-gray-700">
                     <MapPin className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
                     <div>
@@ -175,14 +150,14 @@ export default function Contact() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-3">Quick Response</h3>
                 <p className="text-sm text-orange-50 mb-4">
-                  We typically respond to all inquiries within 24 hours. For urgent matters, please call us directly.
+                  We typically respond to all inquiries within 24 hours through email.
                 </p>
                 <Button 
-                  onClick={() => window.location.href = 'tel:+15551234567'}
+                  onClick={() => window.location.href = 'mailto:marryanns226@gmail.com'}
                   className="w-full bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email Now
                 </Button>
               </CardContent>
             </Card>

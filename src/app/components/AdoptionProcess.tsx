@@ -88,7 +88,7 @@ export default function AdoptionProcess() {
           </div>
           <div className="mt-8 p-6 bg-white rounded-lg border-2 border-orange-300">
             <p className="text-center text-gray-700">
-              <strong className="text-orange-900">Adoption Fee:</strong> $2,500 - $3,500
+              <strong className="text-orange-900">Adoption Fee:</strong> $300 - $500
               <span className="block text-sm mt-2 text-gray-600">
                 Pricing varies based on puppy lineage, gender, and characteristics
               </span>

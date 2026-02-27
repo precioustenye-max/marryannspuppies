@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -32,13 +32,6 @@ export default function Footer() {
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+15551234567"
-                className="w-10 h-10 bg-orange-800 hover:bg-orange-700 rounded-full flex items-center justify-center transition-colors"
-                aria-label="Phone"
-              >
-                <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -81,12 +74,6 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
                 <a href="mailto:marryanns226@gmail.com" className="text-orange-200 hover:text-white transition-colors text-sm">
                   marryanns226@gmail.com
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <Phone className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                <a href="tel:+15551234567" className="text-orange-200 hover:text-white transition-colors text-sm">
-                  (555) 123-4567
                 </a>
               </li>
               <li className="flex items-start gap-2">

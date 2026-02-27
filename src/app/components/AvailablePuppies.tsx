@@ -145,17 +145,17 @@ export default function AvailablePuppies() {
 
         <div className="text-center mt-12 p-8 bg-white rounded-xl shadow-md max-w-2xl mx-auto">
           <p className="text-gray-700 mb-4">
-            <strong>New puppies arrive regularly!</strong> If you don't see the perfect match today, contact us to be notified about upcoming litters.
+            <strong>Not all of our puppies are listed above.</strong> If there is any puppy you are interested in, please inbox us through email and we will gladly help you.
           </p>
           <Button 
             onClick={() => {
-              const subject = encodeURIComponent('Notification Request for Future Litters');
+              const subject = encodeURIComponent('Puppy Availability Inquiry');
               window.location.href = `mailto:marryanns226@gmail.com?subject=${subject}`;
             }}
             className="bg-orange-500 hover:bg-orange-600"
           >
             <Mail className="w-4 h-4 mr-2" />
-            Get Notified
+            Email Us
           </Button>
         </div>
       </div>
