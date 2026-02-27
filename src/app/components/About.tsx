@@ -2,6 +2,15 @@ import { Heart, Home, Stethoscope, GraduationCap } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export default function About() {
+  const imageModules = import.meta.glob('../../public/*.jpeg', {
+    eager: true,
+    import: 'default',
+  }) as Record<string, string>;
+
+  const missionImage =
+    Object.entries(imageModules).sort(([a], [b]) => a.localeCompare(b))[0]?.[1] ??
+    'https://images.unsplash.com/photo-1664993478752-964a2dd0a9d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080';
+
   const features = [
     {
       icon: Heart,
@@ -40,7 +49,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1664993478752-964a2dd0a9d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGZsdWZmeSUyMGRvZyUyMGhvbWV8ZW58MXx8fHwxNzcxNTQ5MTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src={missionImage}
               alt="Happy Maltese at home"
               className="w-full h-auto"
             />

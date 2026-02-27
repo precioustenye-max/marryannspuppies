@@ -18,7 +18,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Heart className="w-8 h-8 text-orange-500 fill-orange-500" />
+            <Heart className="w-8 h-8 text-orange-500 fill-orange-500" /> 
             <div>
               <h1 className="text-2xl font-serif text-orange-900">Marry Ann Puppies</h1>
               <p className="text-xs text-orange-700">Premium Maltese Adoption</p>

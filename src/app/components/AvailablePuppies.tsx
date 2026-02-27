@@ -5,68 +5,48 @@ import { Heart, Mail, Calendar, Weight, Palette } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export default function AvailablePuppies() {
-  const puppies = [
-    {
-      id: 1,
-      name: "Bella",
-      image: "https://images.unsplash.com/photo-1680650715044-8391ccc93584?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWx0ZXNlJTIwcHVwcHklMjB3aGl0ZSUyMGZsdWZmeXxlbnwxfHx8fDE3NzE1NDkxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      age: "10 weeks",
-      weight: "2.5 lbs",
-      color: "Pure White",
-      description: "Sweet and playful, Bella loves cuddles and is great with children. She has a gentle personality and beautiful coat.",
-      status: "Available"
-    },
-    {
-      id: 2,
-      name: "Charlie",
-      image: "https://images.unsplash.com/photo-1680650666378-d6d7b5e94d53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWx0ZXNlJTIwZG9nJTIwcG9ydHJhaXQlMjBjdXRlfGVufDF8fHx8MTc3MTU0OTE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      age: "12 weeks",
-      weight: "3 lbs",
-      color: "Pure White",
-      description: "Energetic and curious, Charlie is always ready for adventure. He's intelligent and learns quickly.",
-      status: "Available"
-    },
-    {
-      id: 3,
-      name: "Daisy",
-      image: "https://images.unsplash.com/photo-1636890877393-38a387c32098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMHdoaXRlJTIwcHVwcHklMjBwbGF5aW5nfGVufDF8fHx8MTc3MTU0OTE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      age: "9 weeks",
-      weight: "2.2 lbs",
-      color: "White",
-      description: "Daisy is affectionate and loves to play. She's well-socialized and gets along wonderfully with other pets.",
-      status: "Available"
-    },
-    {
-      id: 4,
-      name: "Max",
-      image: "https://images.unsplash.com/photo-1713352419538-18a691b8fd7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWx0ZXNlJTIwcHVwcHklMjBmYW1pbHl8ZW58MXx8fHwxNzcxNTQ5MTQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      age: "11 weeks",
-      weight: "2.8 lbs",
-      color: "Pure White",
-      description: "Max is confident and friendly with a wonderful temperament. He comes from champion bloodlines.",
-      status: "Available"
-    },
-    {
-      id: 5,
-      name: "Luna",
-      image: "https://images.unsplash.com/photo-1664993478752-964a2dd0a9d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGZsdWZmeSUyMGRvZyUyMGhvbWV8ZW58MXx8fHwxNzcxNTQ5MTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      age: "8 weeks",
-      weight: "2 lbs",
-      color: "White",
-      description: "Luna is calm and gentle, perfect for families looking for a relaxed companion. She's incredibly sweet.",
-      status: "Available"
-    },
-    {
-      id: 6,
-      name: "Rocky",
-      image: "https://images.unsplash.com/photo-1688990397318-8f24356eef5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHdoaXRlJTIwcHVwcHklMjBvdXRkb29yfGVufDF8fHx8MTc3MTU0OTE0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      age: "10 weeks",
-      weight: "2.6 lbs",
-      color: "Pure White",
-      description: "Rocky is playful and social, always ready to make new friends. He has a wonderful outgoing personality.",
-      status: "Available"
-    }
+  const imageModules = import.meta.glob('../../public/*.jpeg', {
+    eager: true,
+    import: 'default',
+  }) as Record<string, string>;
+
+  const imagePaths = Object.entries(imageModules)
+    .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+    .map(([, src]) => src);
+
+  const puppyNames = [
+    'Bella',
+    'Luna',
+    'Daisy',
+    'Milo',
+    'Coco',
+    'Rosie',
+    'Teddy',
+    'Pearl',
+    'Snowy',
+    'Ruby',
+    'Charlie',
+    'Willow',
+    'Mocha',
+    'Angel',
+    'Nala',
+    'Poppy',
+    'Blue',
+    'Maple',
+    'Sunny',
   ];
+
+  const puppies = imagePaths.map((image, index) => ({
+    id: index + 1,
+    name: puppyNames[index % puppyNames.length],
+    image,
+    age: '8-12 weeks',
+    weight: '2-4 lbs',
+    color: 'Maltese White',
+    description:
+      'Healthy, playful, and socialized Maltese puppy raised with care and ready for a loving home.',
+    status: 'Available',
+  }));
 
   const handleInquiry = (puppyName: string) => {
     const subject = encodeURIComponent(`Inquiry about ${puppyName}`);
