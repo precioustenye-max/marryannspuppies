@@ -36,6 +36,28 @@ export default function AvailablePuppies() {
     'Sunny',
   ];
 
+  const puppyDescriptions = [
+    'A sweet cuddle bug who loves gentle lap time and follows you everywhere.',
+    'Playful and curious with a bright personality and a quick-learning mind.',
+    'Calm, affectionate, and perfect for a cozy family home.',
+    'Energetic little explorer who enjoys toys, games, and attention.',
+    'Gentle and elegant with a soft temperament and lots of love to give.',
+    'Friendly and social, always excited to meet new people and pets.',
+    'Confident and happy with a charming spirit and loyal heart.',
+    'Tiny and tender, happiest when snuggled close with family.',
+    'Bouncy and joyful with a fun-loving personality and adorable quirks.',
+    'Very affectionate and easygoing, ideal for first-time puppy parents.',
+    'Smart and alert with a calm nature and excellent companionship qualities.',
+    'Cheerful and loving, with a playful streak and gentle manners.',
+    'Sweet-natured and well-socialized, ready to fit into a loving home.',
+    'Bright-eyed and curious, with a balanced mix of playfulness and calm.',
+    'Soft, cuddly, and people-focused with a naturally friendly temperament.',
+    'Adorable and outgoing, always ready for fun and family bonding time.',
+    'Loyal and affectionate with a warm personality and loving behavior.',
+    'Graceful and calm, with a gentle spirit and beautiful Maltese charm.',
+    'Happy, snuggly, and full of personality, ready for a forever family.',
+  ];
+
   const puppies = imagePaths.map((image, index) => ({
     id: index + 1,
     name: puppyNames[index % puppyNames.length],
@@ -43,8 +65,7 @@ export default function AvailablePuppies() {
     age: '8-12 weeks',
     weight: '2-4 lbs',
     color: 'Maltese White',
-    description:
-      'Healthy, playful, and socialized Maltese puppy raised with care and ready for a loving home.',
+    description: puppyDescriptions[index % puppyDescriptions.length],
     status: 'Available',
   }));
 
