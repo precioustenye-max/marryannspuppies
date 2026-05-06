@@ -7,7 +7,7 @@ export default function Testimonials() {
       name: "Sarah Johnson",
       location: "California",
       rating: 5,
-      text: "We adopted Bella from Marry Ann Puppies and couldn't be happier! She's healthy, well-socialized, and has the sweetest temperament. The entire process was professional and caring.",
+      text: "We adopted Bella from miniaturedashchund and couldn't be happier! She's healthy, well-socialized, and has the sweetest temperament. The entire process was professional and caring.",
       date: "January 2026"
     },
     {
@@ -21,7 +21,7 @@ export default function Testimonials() {
       name: "Emily Rodriguez",
       location: "Florida",
       rating: 5,
-      text: "I've been looking for a Maltese for years, and Marry Ann Puppies exceeded all expectations. Daisy is beautiful, healthy, and has brought so much joy to our family. Highly recommend!",
+      text: "I've been looking for a Dachshund for years, and miniaturedashchund exceeded all expectations. Daisy is beautiful, healthy, and has brought so much joy to our family. Highly recommend!",
       date: "November 2025"
     },
     {
@@ -42,7 +42,7 @@ export default function Testimonials() {
       name: "Robert Martinez",
       location: "Arizona",
       rating: 5,
-      text: "Best decision ever! Rocky has been a wonderful addition to our family. The health guarantee and support provided by Marry Ann Puppies gives us peace of mind. 5 stars!",
+      text: "Best decision ever! Rocky has been a wonderful addition to our family. The health guarantee and support provided by miniaturedashchund gives us peace of mind. 5 stars!",
       date: "August 2025"
     }
   ];
@@ -55,7 +55,7 @@ export default function Testimonials() {
             Happy Families
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our happy adopters have to say about their experience with Marry Ann Puppies.
+            Don't just take our word for it. Here's what our happy adopters have to say about their experience with miniaturedashchund.
           </p>
         </div>
 

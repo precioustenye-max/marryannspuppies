@@ -1,4 +1,4 @@
-import { Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, Phone } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -15,7 +15,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const subject = encodeURIComponent('New Inquiry from Marry Ann Puppies Website');
+    const subject = encodeURIComponent('New Inquiry from miniaturedashchund Website');
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
@@ -23,7 +23,7 @@ export default function Contact() {
       `Message:\n${formData.message}`
     );
     
-    window.location.href = `mailto:marryanns226@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:miniaturedachshund81@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -117,14 +117,24 @@ export default function Contact() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-orange-900 mb-6">Contact Information</h3>
                 <div className="space-y-4">
+                  <a
+                    href="tel:12025072141"
+                    className="flex items-start gap-3 text-gray-700 hover:text-orange-600 transition-colors"
+                  >
+                    <Phone className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Phone</p>
+                      <p className="text-sm">12025072141</p>
+                    </div>
+                  </a>
                   <a 
-                    href="mailto:marryanns226@gmail.com"
+                    href="mailto:miniaturedachshund81@gmail.com"
                     className="flex items-start gap-3 text-gray-700 hover:text-orange-600 transition-colors"
                   >
                     <Mail className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-sm">marryanns226@gmail.com</p>
+                      <p className="text-sm">miniaturedachshund81@gmail.com</p>
                     </div>
                   </a>
                   <div className="flex items-start gap-3 text-gray-700">
@@ -153,7 +163,7 @@ export default function Contact() {
                   We typically respond to all inquiries within 24 hours through email.
                 </p>
                 <Button 
-                  onClick={() => window.location.href = 'mailto:marryanns226@gmail.com'}
+                  onClick={() => window.location.href = 'mailto:miniaturedachshund81@gmail.com'}
                   className="w-full bg-white text-orange-600 hover:bg-orange-50"
                 >
                   <Mail className="w-4 h-4 mr-2" />

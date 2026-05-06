@@ -72,7 +72,7 @@ export default function AvailablePuppies() {
   const handleInquiry = (puppyName: string) => {
     const subject = encodeURIComponent(`Inquiry about ${puppyName}`);
     const body = encodeURIComponent(`Hello,\n\nI am interested in learning more about ${puppyName} and the adoption process.\n\nThank you!`);
-    window.location.href = `mailto:marryanns226@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:miniaturedachshund81@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -150,7 +150,7 @@ export default function AvailablePuppies() {
           <Button 
             onClick={() => {
               const subject = encodeURIComponent('Puppy Availability Inquiry');
-              window.location.href = `mailto:marryanns226@gmail.com?subject=${subject}`;
+              window.location.href = `mailto:miniaturedachshund81@gmail.com?subject=${subject}`;
             }}
             className="bg-orange-500 hover:bg-orange-600"
           >

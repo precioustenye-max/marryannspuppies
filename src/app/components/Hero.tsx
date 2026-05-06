@@ -3,6 +3,14 @@ import { Button } from './ui/button';
 import { motion } from 'motion/react';
 
 export default function Hero() {
+  const imageModules = import.meta.glob('../../public/*.jpeg', {
+    eager: true,
+    import: 'default',
+  }) as Record<string, string>;
+
+  const heroImage =
+    Object.entries(imageModules).sort(([a], [b]) => a.localeCompare(b))[0]?.[1] ?? '';
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -65,7 +73,7 @@ export default function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1680650715044-8391ccc93584?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWx0ZXNlJTIwcHVwcHklMjB3aGl0ZSUyMGZsdWZmeXxlbnwxfHx8fDE3NzE1NDkxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080)',
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -99,14 +107,14 @@ export default function Hero() {
             className="text-5xl md:text-7xl font-serif text-white leading-tight mb-6"
           >
             Find Your Perfect
-            <span className="block text-orange-300">Maltese Companion</span>
+            <span className="block text-orange-300">Dashchund Companion</span>
           </motion.h2>
           
           <motion.p 
             variants={itemVariants}
             className="text-xl text-orange-100 leading-relaxed mb-8 max-w-2xl"
           >
-            Welcome to Marry Ann Puppies, where we specialize in raising healthy, happy, and well-socialized Maltese puppies. Each puppy is raised with love and care in our family home.
+            Welcome to miniaturedashchund, where we specialize in raising healthy, happy, and well-socialized Dachshund puppies. Each puppy is raised with love and care in our family home.
           </motion.p>
           
           <motion.div 

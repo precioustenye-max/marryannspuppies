@@ -14,24 +14,24 @@ export default function About() {
   const features = [
     {
       icon: Heart,
-      title: "Raised with Love",
-      description: "Every puppy is raised in our loving home environment with constant care and attention."
+      title: 'Raised with Love',
+      description: 'Every puppy is raised in our loving home environment with constant care and attention.',
     },
     {
       icon: Home,
-      title: "Family Socialized",
-      description: "Our puppies grow up around children and other pets, ensuring they're well-adjusted and friendly."
+      title: 'Family Socialized',
+      description: "Our puppies grow up around children and other pets, ensuring they're well-adjusted and friendly.",
     },
     {
       icon: Stethoscope,
-      title: "Health Certified",
-      description: "All puppies receive comprehensive veterinary care, vaccinations, and health certifications."
+      title: 'Health Certified',
+      description: 'All puppies receive comprehensive veterinary care, vaccinations, and health certifications.',
     },
     {
       icon: GraduationCap,
-      title: "Early Training",
-      description: "We begin basic training and socialization from day one to give your puppy the best start."
-    }
+      title: 'Early Training',
+      description: 'We begin basic training and socialization from day one to give your puppy the best start.',
+    },
   ];
 
   return (
@@ -39,18 +39,19 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-orange-950 mb-4">
-            About Marry Ann Puppies
+            About miniaturedashchund
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            With over 15 years of experience, we're dedicated to breeding exceptional Maltese puppies that bring joy to families worldwide.
+            With over 15 years of experience, we're dedicated to breeding exceptional
+            Dachshund puppies that bring joy to families worldwide.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="rounded-2xl overflow-hidden shadow-xl">
-            <ImageWithFallback 
+            <ImageWithFallback
               src={missionImage}
-              alt="Happy Maltese at home"
+              alt="Happy Dachshund at home"
               className="w-full h-auto"
             />
           </div>
@@ -60,16 +61,22 @@ export default function About() {
               Our Mission & Values
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              At Marry Ann Puppies, we believe that every family deserves a healthy, happy, and well-adjusted companion. Our Maltese puppies are more than just pets—they're family members who will bring endless love and joy to your home.
+              At miniaturedashchund, we believe that every family deserves a healthy,
+              happy, and well-adjusted companion. Our Dachshund puppies are more than
+              just pets. They&apos;re family members who will bring endless love and joy
+              to your home.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We take pride in our ethical breeding practices, ensuring that all our puppies come from champion bloodlines with excellent temperaments. Each puppy receives individualized care, proper nutrition, and early socialization to prepare them for their forever homes.
+              We take pride in our ethical breeding practices, ensuring that all our
+              puppies come from champion bloodlines with excellent temperaments. Each
+              puppy receives individualized care, proper nutrition, and early
+              socialization to prepare them for their forever homes.
             </p>
             <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
               <p className="text-orange-900 font-semibold">
                 "Our goal is to match each puppy with the perfect family, creating bonds that last a lifetime."
               </p>
-              <p className="text-orange-700 text-sm mt-2">— Mary Ann, Founder</p>
+              <p className="text-orange-700 text-sm mt-2">Founder, miniaturedashchund</p>
             </div>
           </div>
         </div>
