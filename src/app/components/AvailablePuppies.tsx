@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { Heart, Mail, Calendar, Weight, Palette } from 'lucide-react';
+import { Mail, Calendar, Weight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export default function AvailablePuppies() {
@@ -26,14 +26,6 @@ export default function AvailablePuppies() {
     'Snowy',
     'Ruby',
     'Charlie',
-    'Willow',
-    'Mocha',
-    'Angel',
-    'Nala',
-    'Poppy',
-    'Blue',
-    'Maple',
-    'Sunny',
   ];
 
   const puppyDescriptions = [
@@ -54,8 +46,21 @@ export default function AvailablePuppies() {
     'Soft, cuddly, and people-focused with a naturally friendly temperament.',
     'Adorable and outgoing, always ready for fun and family bonding time.',
     'Loyal and affectionate with a warm personality and loving behavior.',
-    'Graceful and calm, with a gentle spirit and beautiful Maltese charm.',
-    'Happy, snuggly, and full of personality, ready for a forever family.',
+    'Graceful and calm, with a gentle spirit and beautiful Dachshund charm.',
+  ];
+
+  const puppyPrices = [
+    '$300',
+    '$325',
+    '$350',
+    '$375',
+    '$400',
+    '$450',
+    '$475',
+    '$500',
+    '$525',
+    '$550',
+    '$600',
   ];
 
   const puppies = imagePaths.map((image, index) => ({
@@ -64,7 +69,7 @@ export default function AvailablePuppies() {
     image,
     age: '8-12 weeks',
     weight: '2-4 lbs',
-    color: 'Maltese White',
+    price: puppyPrices[index % puppyPrices.length],
     description: puppyDescriptions[index % puppyDescriptions.length],
     status: 'Available',
   }));
@@ -80,10 +85,10 @@ export default function AvailablePuppies() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-orange-950 mb-4">
-            Available Maltese Puppies
+            Available Dachshund Puppies
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Meet our adorable Maltese puppies looking for their forever homes. Each puppy is health-checked, vaccinated, and comes with a health guarantee.
+            Meet our adorable Dachshund puppies looking for their forever homes. Each puppy is health-checked, vaccinated, and comes with a health guarantee.
           </p>
         </div>
 
@@ -106,37 +111,31 @@ export default function AvailablePuppies() {
                 <CardTitle className="text-2xl font-serif text-orange-900 mb-2">
                   {puppy.name}
                 </CardTitle>
-                <CardDescription className="text-gray-600 mb-4">
-                  {puppy.description}
+                <CardDescription className="text-gray-600 mb-3">
+                  Individual puppy listing
                 </CardDescription>
-                <div className="space-y-2">
+                <div className="space-y-3">
+                  <div className="text-2xl font-bold text-orange-600">
+                    {puppy.price}
+                  </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
                     <Calendar className="w-4 h-4 text-orange-500" />
-                    <span>{puppy.age} old</span>
+                    <span>{puppy.age}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
                     <Weight className="w-4 h-4 text-orange-500" />
                     <span>{puppy.weight}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <Palette className="w-4 h-4 text-orange-500" />
-                    <span>{puppy.color}</span>
-                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">{puppy.description}</p>
                 </div>
               </CardContent>
-              <CardFooter className="p-6 pt-0 flex gap-2">
-                <Button 
+              <CardFooter className="p-6 pt-0">
+                <Button
                   onClick={() => handleInquiry(puppy.name)}
-                  className="flex-1 bg-orange-500 hover:bg-orange-600"
+                  className="w-full bg-orange-500 hover:bg-orange-600"
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  Inquire
-                </Button>
-                <Button 
-                  variant="outline"
-                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50"
-                >
-                  <Heart className="w-4 h-4" />
+                  Inquire About {puppy.name}
                 </Button>
               </CardFooter>
             </Card>
